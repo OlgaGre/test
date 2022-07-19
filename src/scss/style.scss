@@ -1,9 +1,79 @@
-body{
-  background-color: darkcyan;
-  span{
-    color: blue;
-  }
-  background-image: url(../files/img/1.png);
-  background-repeat: no-repeat;
-  
+// constant values ​​from template
+
+$blue: #5A61ED;
+$darkGrey: #7C7C7C;
+$liteGrey: #F2F2F2;
+$liteBlue:#F9FAFF;
+
+@mixin labelTitla {
+	font-family: 'WorkSans';
+	font-size: 12px;
+	line-height: 14px;
+}
+
+@mixin inputContent {
+	font-family: 'WorkSans';
+	font-size: 14px;
+	line-height: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+
+//screen width is larger 780px 
+@media screen and (min-width: 768px) {
+	body {
+		background-color: $liteGrey;
+	}
+
+	.popup {
+
+		width: 665px;
+		height: 481px;
+		margin: 5% auto;
+		display: grid;
+		grid-template-columns: 138px 1fr;
+	}
+
+	.bitmap {
+		background-color: $blue;
+		position: relative;
+
+		.rotate {
+      font-family: 'PT Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 49px;
+      line-height: 63px;
+      letter-spacing: 0.5px;
+color: white;
+
+      position: absolute;
+      width: 162px;
+      
+      right: -46px;
+      bottom: 72px;
+		
+			-webkit-transform: rotate(-90deg); //Chrome, Safari
+			-moz-transform: rotate(-90deg); //Firefox
+			-o-transform: rotate(-90deg); //Opera
+			-ms-transform: rotate(-90deg); //IE
+			transform: rotate(-90deg); //браузеры без префексов
+		}
+	}
+
+}
+
+// screen width is larger 320px and less 780px
+
+
+//fixed styles
+.popup {
+	background-color: white;
 }
