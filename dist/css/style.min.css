@@ -1,8 +1,87 @@
-body {
-  background-color: darkcyan;
-  background-image: url(../files/img/1.png);
-  background-repeat: no-repeat;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body span {
-  color: blue;
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #F2F2F2;
+  }
+  .popup {
+    width: 665px;
+    height: 481px;
+    margin: 5% auto;
+    display: grid;
+    grid-template-columns: 138px 1fr;
+  }
+  .bitmap {
+    background-color: #5A61ED;
+    position: relative;
+  }
+  .bitmap .rotate {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 63px;
+    letter-spacing: 0.5px;
+    color: white;
+    position: absolute;
+    width: 162px;
+    right: -46px;
+    bottom: 72px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  .popup_content {
+    padding: 38px 21px;
+  }
+  .popup_content .title {
+    font-family: "Work Sans", sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    /* identical to box height */
+    letter-spacing: -0.46px;
+  }
+  .popup_content .title_small {
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+  }
+  .labelInput {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .labelInput,
+.dateOfBirth,
+.gender {
+    margin-right: 13px;
+    margin-bottom: 16px;
+    height: 42px;
+  }
+  .labelTitla {
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7C7C7C;
+  }
+  .inputContent {
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: transparent;
+  }
+}
+.popup {
+  background-color: white;
 }

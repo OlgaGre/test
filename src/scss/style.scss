@@ -6,15 +6,17 @@ $liteGrey: #F2F2F2;
 $liteBlue:#F9FAFF;
 
 @mixin labelTitla {
-	font-family: 'WorkSans';
+  font-family: 'Work Sans', sans-serif;
 	font-size: 12px;
 	line-height: 14px;
+
 }
 
 @mixin inputContent {
-	font-family: 'WorkSans';
+	font-family: 'Work Sans', sans-serif;
 	font-size: 14px;
 	line-height: 16px;
+  font-weight: 500;
 }
 
 * {
@@ -46,20 +48,20 @@ $liteBlue:#F9FAFF;
 		position: relative;
 
 		.rotate {
-      font-family: 'PT Sans';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 49px;
-      line-height: 63px;
-      letter-spacing: 0.5px;
-color: white;
+			font-family: 'PT Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 49px;
+			line-height: 63px;
+			letter-spacing: 0.5px;
+			color: white;
 
-      position: absolute;
-      width: 162px;
-      
-      right: -46px;
-      bottom: 72px;
-		
+			position: absolute;
+			width: 162px;
+
+			right: -46px;
+			bottom: 72px;
+
 			-webkit-transform: rotate(-90deg); //Chrome, Safari
 			-moz-transform: rotate(-90deg); //Firefox
 			-o-transform: rotate(-90deg); //Opera
@@ -67,6 +69,57 @@ color: white;
 			transform: rotate(-90deg); //браузеры без префексов
 		}
 	}
+
+	.popup_content {
+		padding: 38px 21px;
+
+		.title {
+			font-family: 'Work Sans', sans-serif;
+			font-size: 22px;
+			line-height: 26px;
+
+			/* identical to box height */
+
+			letter-spacing: -0.46px;
+		}
+
+    .title_small {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+    }
+	}
+
+
+	.inputs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-top: 20px;
+	}
+
+	.labelInput {
+		display: grid;
+		grid-template-columns: 1fr;
+
+	}
+
+	.labelInput,
+	.dateOfBirth,
+	.gender {
+		margin-right: 13px;
+		margin-bottom: 16px;
+    height: 42px;
+	}
+
+	.labelTitla {
+		@include labelTitla();
+		color: #7C7C7C;
+	}
+  .inputContent{
+    @include inputContent();
+    color: transparent;
+    
+  }
 
 }
 
