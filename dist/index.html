@@ -24,41 +24,56 @@
 			<div class="labelInput">
 				<label for="firstName" class="labelTitla"> First Name</label>
 
-				<input type="text" name="firstName" id="firstName" class="inputContent" />
+				<input
+					type="text"
+					name="firstName"
+					id="firstName"
+					class="inputContent"
+				/>
 			</div>
 			<div class="labelInput">
 				<label for="lasttName" class="labelTitla"> Last Name</label>
 
-				<input type="text" name="lasttName" id="lasttName" class="inputContent"/>
+				<input
+					type="text"
+					name="lasttName"
+					id="lasttName"
+					class="inputContent"
+				/>
 			</div>
 			<div class="labelInput">
 				<label for="nationality" class="labelTitla"> Nationality</label>
 
-				<input type="text" name="nationality" id="nationality" class="inputContent"/>
+				<input
+					type="text"
+					name="nationality"
+					id="nationality"
+					class="inputContent"
+				/>
 			</div>
 			<div class="labelInput">
-				<label for="email" class="labelTitla">E-mail      </label>
+				<label for="email" class="labelTitla">E-mail </label>
 
 				<input type="text" name="email" id="email" class="inputContent" />
 			</div>
-      <div class="labelInput">
-        <form class = "container">
-          <label >birthday<span>*</span></label>
-          <SELECT id ="year" name = "yyyy" onchange="change_year(this)">
-          </SELECT>
-          <SELECT  id ="month" name = "mm" onchange="change_month(this)">
-          </SELECT>
-          <SELECT id ="day" name = "dd" >
-          </SELECT>
-         </form>
-				</div>
+			<div class="labelInput">
+				<form class="dateOfBirth">
+					<label>Date of Birth</label>
+					<div class="sectionLine">
+						<select id="day" name="dd"></select>
+						<select id="month" name="mm" onchange="change_month(this)"></select>
+						<select id="year" name="yyyy" onchange="change_year(this)"></select>
+					</div>
+				</form>
 			</div>
 			<div class="gender">
-       <div class="labelTitla">Gender</div> 
+				<div class="labelTitla">Gender</div>
+        <div class="genderLine">
+        <input type="radio" name="gender" id="male" />
 				<label for="male" class="inputContent">Male </label>
-				<input type="radio" name="gender" id="male" />
-        <label for="female" class="inputContent">Female </label>
 				<input type="radio" name="gender" id="female" />
+				<label for="female" class="inputContent">Female </label>
+      </div>
 			</div>
 			<div class="labelInput">
 				<label for="password" class="labelTitla"> Password</label>
@@ -66,18 +81,26 @@
 				<input type="text" name="password" id="password" class="inputContent" />
 			</div>
 			<div class="labelInput">
-				<label for="confirmPassword" class="labelTitla"> Confirm Password</label>
+				<label for="confirmPassword" class="labelTitla">
+					Confirm Password</label
+				>
 
-				<input type="text" name="confirmPassword" id="confirmPassword" class="inputContent"/>
+				<input
+					type="text"
+					name="confirmPassword"
+					id="confirmPassword"
+					class="inputContent"
+				/>
 			</div>
 		</div>
 		<div>Have an account? Log</div>
 		<button>Complete Signup</button>
 	</div>
-
+</div>
 
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="./files/js/birthday.js"></script>
 		<script src="./files/js/index.js"></script>
 	
 	</body>

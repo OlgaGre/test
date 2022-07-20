@@ -6,7 +6,7 @@ $liteGrey: #F2F2F2;
 $liteBlue:#F9FAFF;
 
 @mixin labelTitla {
-  font-family: 'Work Sans', sans-serif;
+	font-family: 'Work Sans', sans-serif;
 	font-size: 12px;
 	line-height: 14px;
 
@@ -16,13 +16,18 @@ $liteBlue:#F9FAFF;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 14px;
 	line-height: 16px;
-  font-weight: 500;
+	font-weight: 500;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+}
+
+*:focus {
+	outline: none;
 }
 
 
@@ -83,11 +88,11 @@ $liteBlue:#F9FAFF;
 			letter-spacing: -0.46px;
 		}
 
-    .title_small {
-      font-family: 'Work Sans', sans-serif;
-      font-size: 14px;
-      line-height: 16px;
-    }
+		.title_small {
+			font-family: 'Work Sans', sans-serif;
+			font-size: 14px;
+			line-height: 16px;
+		}
 	}
 
 
@@ -95,12 +100,25 @@ $liteBlue:#F9FAFF;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		margin-top: 20px;
+    grid-column-gap: 13px;
 	}
 
 	.labelInput {
 		display: grid;
 		grid-template-columns: 1fr;
 
+		input,
+		select {
+			border: 0;
+			border-bottom: 1px solid $liteGrey;
+		}
+
+		input:-webkit-autofill,
+		input:-webkit-autofill:hover,
+		input:-webkit-autofill:focus,
+		input:-webkit-autofill:active {
+			-webkit-box-shadow: 0 0 0 30px white inset !important;
+		}
 	}
 
 	.labelInput,
@@ -108,25 +126,45 @@ $liteBlue:#F9FAFF;
 	.gender {
 		margin-right: 13px;
 		margin-bottom: 16px;
-    height: 42px;
-	}
+		height: 42px;
 
+	}
+.dateOfBirth label,
 	.labelTitla {
 		@include labelTitla();
 		color: #7C7C7C;
 	}
-  .inputContent{
-    @include inputContent();
-    color: transparent;
-    
-  }
+  
+	.inputContent {
+		@include inputContent();
 
+
+	}
+
+	.sectionLine {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
-// screen width is larger 320px and less 780px
+.gender {
+
+	div {
+		text-align: left;
+		margin-bottom: 5px;
+	}
+
+	.genderLine {
+		display: flex;
+
+		label {
+      margin-left: 5px;
+			margin-right: 19px;
+		}
+	}
+}
 
 
-//fixed styles
 .popup {
 	background-color: white;
 }

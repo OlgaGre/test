@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 @media screen and (min-width: 768px) {
   body {
     background-color: #F2F2F2;
@@ -56,10 +60,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 20px;
+    grid-column-gap: 13px;
   }
   .labelInput {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .labelInput input,
+.labelInput select {
+    border: 0;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  .labelInput input:-webkit-autofill,
+.labelInput input:-webkit-autofill:hover,
+.labelInput input:-webkit-autofill:focus,
+.labelInput input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
   }
   .labelInput,
 .dateOfBirth,
@@ -68,7 +84,8 @@
     margin-bottom: 16px;
     height: 42px;
   }
-  .labelTitla {
+  .dateOfBirth label,
+.labelTitla {
     font-family: "Work Sans", sans-serif;
     font-size: 12px;
     line-height: 14px;
@@ -79,9 +96,24 @@
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    color: transparent;
+  }
+  .sectionLine {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+.gender div {
+  text-align: left;
+  margin-bottom: 5px;
+}
+.gender .genderLine {
+  display: flex;
+}
+.gender .genderLine label {
+  margin-left: 5px;
+  margin-right: 19px;
+}
+
 .popup {
   background-color: white;
 }
