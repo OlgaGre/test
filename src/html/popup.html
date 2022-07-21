@@ -39,7 +39,7 @@
 			<div class="labelInput">
 				<label for="email" class="labelTitla">E-mail </label>
 
-				<input type="text" name="email" id="email" class="inputContent" />
+				<input type="email" name="email" id="email" class="inputContent" />
 			</div>
 			<div class="labelInput">
 				<form class="dateOfBirth">
@@ -53,12 +53,12 @@
 			</div>
 			<div class="gender">
 				<div class="labelTitla">Gender</div>
-        <div class="genderLine">
-        <input type="radio" name="gender" id="male" />
-				<label for="male" class="inputContent">Male </label>
-				<input type="radio" name="gender" id="female" />
-				<label for="female" class="inputContent">Female </label>
-      </div>
+				<div class="genderLine">
+					<input type="radio" name="gender" id="male" />
+					<label for="male" class="inputContent">Male </label>
+					<input type="radio" name="gender" id="female" />
+					<label for="female" class="inputContent">Female </label>
+				</div>
 			</div>
 			<div class="labelInput">
 				<label for="password" class="labelTitla"> Password</label>
@@ -78,7 +78,9 @@
 				/>
 			</div>
 		</div>
-		<div>Have an account?<span>Log</span></div>
-		<button>Complete Signup</button>
+		<div class="lastLine">
+			<div id="log">Have an account?<span>Login</span></div>
+			<button id="signup">Complete Signup</button>
+		</div>
 	</div>
 </div>

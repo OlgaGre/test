@@ -41,67 +41,74 @@
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
-  .popup_content {
-    padding: 38px 21px;
-  }
-  .popup_content .title {
-    font-family: "Work Sans", sans-serif;
-    font-size: 22px;
-    line-height: 26px;
-    /* identical to box height */
-    letter-spacing: -0.46px;
-  }
-  .popup_content .title_small {
-    font-family: "Work Sans", sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .inputs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 20px;
-    grid-column-gap: 13px;
-  }
-  .labelInput {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .labelInput input,
+}
+.popup_content {
+  padding: 38px 21px 0;
+}
+.popup_content .title {
+  font-family: "Work Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  /* identical to box height */
+  letter-spacing: -0.46px;
+}
+.popup_content .title_small {
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  grid-column-gap: 13px;
+}
+
+.labelInput {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.labelInput .inputContent,
 .labelInput select {
-    border: 0;
-    border-bottom: 1px solid #F2F2F2;
-  }
-  .labelInput input:-webkit-autofill,
+  border: 0;
+  border-bottom: 1px solid #F2F2F2;
+}
+.labelInput input:-webkit-autofill,
 .labelInput input:-webkit-autofill:hover,
 .labelInput input:-webkit-autofill:focus,
 .labelInput input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
-  }
-  .labelInput,
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.labelInput,
 .dateOfBirth,
 .gender {
-    margin-right: 13px;
-    margin-bottom: 16px;
-    height: 42px;
-  }
-  .dateOfBirth label,
-.labelTitla {
-    font-family: "Work Sans", sans-serif;
-    font-size: 12px;
-    line-height: 14px;
-    color: #7C7C7C;
-  }
-  .inputContent {
-    font-family: "Work Sans", sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;
-  }
-  .sectionLine {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+  margin-right: 13px;
+  margin-bottom: 16px;
+  height: 42px;
 }
+
+.dateOfBirth label,
+.labelTitla {
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7C7C7C;
+}
+
+.inputContent {
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.sectionLine {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .gender div {
   text-align: left;
   margin-bottom: 5px;
@@ -116,4 +123,40 @@
 
 .popup {
   background-color: white;
+}
+
+#log,
+#signup {
+  font-family: "Work Sans", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 300;
+}
+
+.lastLine {
+  margin-top: 85px;
+  display: flex;
+  justify-content: space-between;
+}
+.lastLine #log {
+  margin-top: 5px;
+}
+.lastLine #log span {
+  color: #5A61ED;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+#signup {
+  width: 154px;
+  height: 32px;
+  background-color: #5A61ED;
+  border: #5A61ED 1px solid;
+  color: white;
+}
+
+.wrongInf {
+  color: red;
+  border: 0;
+  border-bottom: 1px solid red;
 }

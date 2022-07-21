@@ -75,76 +75,79 @@ $liteBlue:#F9FAFF;
 		}
 	}
 
-	.popup_content {
-		padding: 38px 21px;
 
-		.title {
-			font-family: 'Work Sans', sans-serif;
-			font-size: 22px;
-			line-height: 26px;
+}
 
-			/* identical to box height */
+.popup_content {
+	padding: 38px 21px 0;
 
-			letter-spacing: -0.46px;
-		}
+	.title {
+		font-family: 'Work Sans', sans-serif;
+		font-size: 22px;
+		line-height: 26px;
 
-		.title_small {
-			font-family: 'Work Sans', sans-serif;
-			font-size: 14px;
-			line-height: 16px;
-		}
+		/* identical to box height */
+
+		letter-spacing: -0.46px;
 	}
 
+	.title_small {
+		font-family: 'Work Sans', sans-serif;
+		font-size: 14px;
+		line-height: 16px;
+	}
+}
 
-	.inputs {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		margin-top: 20px;
-    grid-column-gap: 13px;
+
+.inputs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 20px;
+	grid-column-gap: 13px;
+}
+
+.labelInput {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	.inputContent,
+	select {
+		border: 0;
+		border-bottom: 1px solid $liteGrey;
 	}
 
-	.labelInput {
-		display: grid;
-		grid-template-columns: 1fr;
-
-		input,
-		select {
-			border: 0;
-			border-bottom: 1px solid $liteGrey;
-		}
-
-		input:-webkit-autofill,
-		input:-webkit-autofill:hover,
-		input:-webkit-autofill:focus,
-		input:-webkit-autofill:active {
-			-webkit-box-shadow: 0 0 0 30px white inset !important;
-		}
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		-webkit-box-shadow: 0 0 0 30px white inset !important;
 	}
+}
 
-	.labelInput,
-	.dateOfBirth,
-	.gender {
-		margin-right: 13px;
-		margin-bottom: 16px;
-		height: 42px;
+.labelInput,
+.dateOfBirth,
+.gender {
+	margin-right: 13px;
+	margin-bottom: 16px;
+	height: 42px;
 
-	}
+}
+
 .dateOfBirth label,
-	.labelTitla {
-		@include labelTitla();
-		color: #7C7C7C;
-	}
-  
-	.inputContent {
-		@include inputContent();
+.labelTitla {
+	@include labelTitla();
+	color: #7C7C7C;
+}
+
+.inputContent {
+	@include inputContent();
 
 
-	}
+}
 
-	.sectionLine {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-	}
+.sectionLine {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .gender {
@@ -158,13 +161,50 @@ $liteBlue:#F9FAFF;
 		display: flex;
 
 		label {
-      margin-left: 5px;
+			margin-left: 5px;
 			margin-right: 19px;
 		}
 	}
 }
 
-
 .popup {
 	background-color: white;
+}
+
+#log,
+#signup {
+
+	font-family: 'Work Sans', sans-serif;
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: 300;
+}
+
+.lastLine {
+	margin-top: 85px;
+	display: flex;
+	justify-content: space-between;
+
+	#log {
+		margin-top: 5px;
+
+		span {
+			color: #5A61ED;
+			text-decoration: underline;
+			font-weight: 500;
+		}
+	}
+}
+
+#signup {
+	width: 154px;
+	height: 32px;
+	background-color: #5A61ED;
+	border: #5A61ED 1px solid;
+	color: white;
+}
+.wrongInf{
+  color: red;
+  border: 0;
+  border-bottom: 1px solid red;
 }
